@@ -27,6 +27,9 @@ namespace NW_MongoDb.Controllers
                 //context.Entry(order).Collection("OrderDetails").Load();
                 context.Orders.Include("OrderDetails").First(o => o.OrderId == orderId);
                 //order.Adapt(dto);
+                
+                //Loopu cozme denemeleriydi bunlar
+
                 OrderDto dto = new OrderDto {
                     Customer = order.Customer,
                     CustomerId = order.CustomerId,
